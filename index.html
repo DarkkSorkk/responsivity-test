@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Loja Online</title>
+</head>
+<body>
+    <header class="header">
+        <header>
+            <nav>
+                <a href="#sobre">Sobre a loja</a>
+                <a href="#produtos">Produtos</a>
+            </nav>
+            <div class="carrinho">
+                <span class="carrinho-icone">🛒</span>
+                <span class="carrinho-quantidade">0</span>
+            </div>
+        </header>
+        
+    </header>
+    <div class="container">
+        <div class="sobre" id="sobre">
+            <h2>Sobre a loja</h2>
+            <div class="sobre-container">
+                
+                <img class="sobre-imagem" src="https://via.placeholder.com/300" alt="Sobre a loja">
+                <p class="sobre-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, quam a luctus cursus, odio libero commodo enim, vitae pulvinar urna libero ac justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin scelerisque, justo et lacinia porta, mi urna facilisis risus, in bibendum erat nulla et dui. Quisque quis eros et tortor dapibus consequat. Integer fringilla, ligula id tincidunt feugiat, justo enim suscipit urna, id hendrerit ipsum turpis et mi. In hac habitasse platea dictumst. Ut venenatis odio eget risus malesuada, sit amet porttitor tortor ullamcorper. Fusce fringilla tellus in turpis scelerisque, at placerat ligula malesuada.</p>
+            </div>
+        </div>
+        <div class="produtos" id="produtos">
+            <h2>Produtos</h2>
+            <div class="produto">
+                <img src="https://via.placeholder.com/150" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p class="produto-descricao">Esta é uma breve descrição do Produto 1. Ela pode ser alterada para fornecer informações relevantes sobre o produto.</p>
+                <button class="btn-carrinho">Adicionar ao carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="https://via.placeholder.com/150" alt="Produto 2">
+                <h3>Produto 2</h3>
+                <p class="produto-descricao">Esta é uma breve descrição do Produto 2. Ela pode ser alterada para fornecer informações relevantes sobre o produto.</p>
+                <button class="btn-carrinho">Adicionar ao carrinho</button>
+                
+            </div>
+            <div class="produto">
+                <img src="https://via.placeholder.com/150" alt="Produto 3">
+                <h3>Produto 3</h3>
+                <p class="produto-descricao">Esta é uma breve descrição do Produto 3. Ela pode ser alterada para fornecer informações relevantes sobre o produto.</p>
+                <button class="btn-carrinho">Adicionar ao carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="https://via.placeholder.com/150" alt="Produto 4">
+                <h3>Produto 4</h3>
+                <p class="produto-descricao">Esta é uma breve descrição do Produto 4. Ela pode ser alterada para fornecer informações relevantes sobre o produto.</p>
+                <button class="btn-carrinho">Adicionar ao carrinho</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Função para atualizar a contagem do carrinho
+    function atualizarCarrinho() {
+        const carrinhoQuantidade = $('.carrinho-quantidade');
+        const quantidadeAtual = parseInt(carrinhoQuantidade.text());
+        carrinhoQuantidade.text(quantidadeAtual + 1);
+    }
+
+    // Adiciona um evento de clique aos botões "Adicionar ao carrinho"
+    $('.btn-carrinho').on('click', atualizarCarrinho);
+</script>
+
+</html>
